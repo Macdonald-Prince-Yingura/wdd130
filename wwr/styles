@@ -1,0 +1,157 @@
+/* ============ CSS VARIABLES ============ */
+:root {
+    /* Color Variables */
+    --primary-color: #006994;
+    --accent1-color: #2E8B57;
+    --accent2-color: #FF8C42;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+
+    /* Font Variables */
+    --heading-font: 'Oswald', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+/* ============ RESET BOX MODEL ============ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============ BODY STYLING ============ */
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    padding: 0 1rem;
+}
+
+/* ============ PAGE LAYOUT ============ */
+header, main, footer {
+    width: 840px;
+    max-width: 96%;
+    margin: 0 auto;
+}
+
+/* ============ HEADER STYLING ============ */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+/* ============ NAVIGATION STYLING ============ */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* ============ HEADING STYLING ============ */
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ============ SECTION & ARTICLE STYLING ============ */
+nav, p, section, article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* ============ HERO SECTION STYLING ============ */
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    opacity: 0.7;
+    background-color: var(--accent1-color);
+    color: #fff;
+    font-size: 2.5rem;
+    z-index: 2;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin-left: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* ============ FOOTER STYLING ============ */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+.socialmedia a {
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.socialmedia img:hover {
+    transform: scale(1.2);
+}
