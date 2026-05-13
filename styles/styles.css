@@ -24,6 +24,7 @@ p {
 
 /* ✅ ASIDE STYLING (ALL REQUIRED PROPERTIES) */
 aside {
+
     width: 300px;
     margin: 20px auto;
     border: 1px solid #333;
@@ -43,5 +44,4 @@ footer {
     margin-top: 20px;
     border-top: 2px solid #333;
     text-align: center;
-    padding: 10px;
 }
