@@ -1,53 +1,44 @@
-/* General Styles */
+/* GENERAL PAGE STYLING */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-/* MAIN SECTION */
+/* ✅ MAIN WIDTH CONTROL */
 main {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0 auto;
 }
 
-/* Profile Image inside main */
+/* ✅ PROFILE IMAGE ONLY (NOT ALL IMAGES) */
 main img {
     width: 150px;
     height: auto;
 }
 
-/* Paragraph Fix */
+/* ✅ REMOVE DEFAULT PARAGRAPH PADDING */
 p {
     padding: 0;
 }
 
-/* ASIDE SECTION */
+/* ✅ ASIDE STYLING (ALL REQUIRED PROPERTIES) */
 aside {
     width: 300px;
     margin: 20px auto;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     padding: 15px;
     background-color: #f4f4f4;
-    color: #333;
-    text-align: center;
+    color: #000;
 }
 
-/* Aside Image */
+/* ✅ ASIDE IMAGE SIZE */
 aside img {
     width: 200px;
     height: auto;
 }
 
-/* FOOTER */
+/* ✅ FOOTER STYLING */
 footer {
     margin-top: 20px;
     border-top: 2px solid #333;
