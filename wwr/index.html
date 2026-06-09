@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description"
-      content="Rapids White Water Rafting home page featuring adventures, trips, and booking information.">
+      content="Rapids White Water Rafting – Ghana's premier river adventure. Book thrilling white water trips, explore packages, and sign up for exclusive offers.">
     <meta name="author" content="Macdonald Prince Yingura">
 
     <title>Home | Rapids White Water Rafting</title>
@@ -17,98 +16,118 @@
 <body>
 
     <header>
-
         <img src="images/rafting-logo.png" alt="Rafting Logo">
-
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
-
     </header>
 
     <main>
 
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION: full-width image with absolutely positioned heading -->
         <section class="hero">
-            <img src="images/hero.jpg" alt="White water rafting adventure">
-            <h1>Rapids White Water Rafting</h1>
-            <p>Feel the thrill. Ride the rapids. Experience adventure.</p>
+            <img src="images/hero.jpg" alt="Rafters paddling through churning white water rapids">
+            <div class="hero-text">
+                <h1>Ride the Rapids</h1>
+                <p>Ghana's most thrilling white water adventures start here.</p>
+                <a href="trips.html" class="btn">Explore Our Trips</a>
+            </div>
         </section>
 
-        <!-- INTRO SECTION -->
-        <section class="intro">
-            <h2>Welcome to Adventure</h2>
+        <!-- NEWSLETTER SIGN-UP -->
+        <section class="newsletter">
+            <div class="newsletter-inner">
+                <h2>Stay in the Current</h2>
+                <p>Sign up for exclusive trip deals, seasonal updates, and river conditions
+                    delivered to your inbox.</p>
+                <form class="newsletter-form" action="#" method="get">
+                    <label for="sub-name">Full Name</label>
+                    <input type="text" id="sub-name" name="sub-name" placeholder="Your full name"
+                      required>
 
-            <p>
-                At Rapids White Water Rafting, we bring you unforgettable river adventures filled
-                with excitement,
-                teamwork, and breathtaking nature experiences. Whether you're a beginner or an
-                expert, we have the perfect trip for you.
-            </p>
+                    <label for="sub-email">Email Address</label>
+                    <input type="email" id="sub-email" name="sub-email" placeholder="your@email.com"
+                      required>
+
+                    <button type="submit">Join the Adventure</button>
+                </form>
+            </div>
         </section>
 
-        <!-- HIGHLIGHTS SECTION -->
-        <section class="highlights">
+        <!-- WHY RAPIDS – CSS GRID SECTION -->
+        <section class="why-rapids">
+            <h2>Why Choose Rapids?</h2>
+            <div class="why-grid">
 
-            <h2>Our Popular Trips</h2>
+                <article class="why-card">
+                    <img src="images/adventure1.jpg" alt="Rafters navigating wild rapids together">
+                    <div class="why-card-text">
+                        <h3>Expert Certified Guides</h3>
+                        <p>Every trip is led by certified, experienced river guides who know Ghana's
+                            waterways
+                            inside out. We hold rigorous safety briefings before every launch so you
+                            can
+                            focus entirely on the thrill ahead.</p>
+                    </div>
+                </article>
 
-            <div class="trip-cards">
+                <article class="why-card">
+                    <img src="images/adventure2.jpg"
+                      alt="Scenic calm river stretch surrounded by tropical jungle">
+                    <div class="why-card-text">
+                        <h3>Breathtaking Scenery</h3>
+                        <p>Float through lush tropical forest, dramatic gorges, and pristine
+                            wilderness found
+                            nowhere else in West Africa. Every stroke of the paddle reveals
+                            something
+                            new and breathtaking around the bend.</p>
+                    </div>
+                </article>
 
-                <div class="card">
-                    <img src="images/adventure1.jpg" alt="Beginner rafting trip">
-                    <h3>Beginner Rapids</h3>
-                    <p>Perfect for first-time rafters.</p>
-                </div>
-
-                <div class="card">
-                    <img src="images/adventure2.jpg" alt="Intermediate rafting adventure">
-                    <h3>Adventure Rapids</h3>
-                    <p>A mix of fun and challenge.</p>
-                </div>
-
-                <div class="card">
-                    <img src="images/adventure3.jpg" alt="Extreme rafting experience">
-                    <h3>Extreme Rapids</h3>
-                    <p>For thrill seekers only.</p>
-                </div>
+                <article class="why-card">
+                    <img src="images/adventure3.jpg"
+                      alt="Group of rafters celebrating after completing a run">
+                    <div class="why-card-text">
+                        <h3>Trips for Every Level</h3>
+                        <p>Whether you are a first-time paddler looking for a gentle float or a
+                            seasoned rafter
+                            craving Class IV+ adrenaline, we have the perfect package for you. All
+                            safety
+                            gear is included and no prior experience is needed to get started.</p>
+                    </div>
+                </article>
 
             </div>
-
         </section>
 
-        <!-- CALL TO ACTION -->
-        <section class="cta">
-            <h2>Ready for Your Adventure?</h2>
-            <p>Book your rafting experience today and create unforgettable memories.</p>
-
-            <a href="trips.html" class="btn">View Trips</a>
+        <!-- CALL TO ACTION BANNER -->
+        <section class="cta-banner">
+            <div class="cta-content">
+                <h2>Ready to Take the Plunge?</h2>
+                <p>Spots fill up fast. Lock in your next river adventure today and make memories
+                    that last a lifetime.</p>
+                <a href="trips.html" class="btn">Book a Trip Now</a>
+            </div>
         </section>
 
     </main>
 
     <footer>
-
         <p>©2026 Rapids White Water Rafting | Macdonald Prince Yingura</p>
-
         <nav class="socialmedia">
-
             <a href="https://facebook.com">
                 <img src="images/facebook.png" alt="Facebook">
             </a>
-
             <a href="https://instagram.com">
                 <img src="images/instagram.png" alt="Instagram">
             </a>
-
             <a href="https://twitter.com">
                 <img src="images/twitter.png" alt="Twitter">
             </a>
-
         </nav>
-
     </footer>
 
 </body>

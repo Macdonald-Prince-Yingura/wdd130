@@ -2,6 +2,17 @@
    GENERAL STYLES
 ========================= */
 
+:root {
+    --primary-color: #062a66;
+    --secondary-color: #0b3d91;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -9,6 +20,11 @@ body {
     line-height: 1.6;
     background-color: #f4f8fb;
     color: #333;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 /* =========================
@@ -26,6 +42,7 @@ header {
 
 header img {
     height: 60px;
+    width: auto;
 }
 
 /* =========================
@@ -39,8 +56,10 @@ nav a {
     font-weight: bold;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
+    color: #adc8ff;
 }
 
 /* =========================
@@ -48,9 +67,243 @@ nav a:hover {
 ========================= */
 
 main {
-    padding: 20px;
     max-width: 1100px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    position: relative;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.hero img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    filter: brightness(0.6);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 680px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin: 0 0 0.5rem;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    margin: 0 0 1.25rem;
+    color: #d6e4ff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #041a44;
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus {
+    background-color: #041a44;
+}
+
+/* =========================
+   NEWSLETTER SECTION
+========================= */
+
+.newsletter {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 30px;
+}
+
+.newsletter-inner {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter h2 {
+    font-size: 1.7rem;
+    margin: 0 0 0.5rem;
+    color: white;
+}
+
+.newsletter p {
+    color: #d6e4ff;
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+
+.newsletter-form label {
+    color: #d6e4ff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.newsletter-form input:focus {
+    outline: 2px solid #adc8ff;
+    border-color: transparent;
+}
+
+.newsletter-form button {
+    align-self: flex-start;
+    margin-top: 14px;
+}
+
+/* =========================
+   HOME: WHY RAPIDS GRID
+========================= */
+
+.why-rapids {
+    margin-bottom: 30px;
+}
+
+.why-rapids h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.why-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.why-card-text {
+    padding: 16px;
+}
+
+.why-card-text h3 {
+    color: var(--primary-color);
+    margin: 0 0 8px;
+    font-size: 1.05rem;
+}
+
+.why-card-text p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+/* =========================
+   CTA BANNER
+========================= */
+
+.cta-banner {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.cta-content h2 {
+    font-size: 1.8rem;
+    color: white;
+    margin: 0 0 0.5rem;
+}
+
+.cta-content p {
+    color: #d6e4ff;
+    margin: 0 0 1.5rem;
 }
 
 /* =========================
@@ -64,12 +317,12 @@ main {
     border-radius: 8px;
 }
 
-/* Map responsiveness */
-iframe {
+.contact-info iframe {
     width: 100%;
     max-width: 100%;
     border: 0;
     margin-top: 15px;
+    border-radius: 6px;
 }
 
 /* =========================
@@ -81,6 +334,7 @@ iframe {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    padding: 20px 0;
 }
 
 .employee-profiles figure {
@@ -90,9 +344,10 @@ iframe {
     text-align: center;
     width: 250px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: 0;
 }
 
-.employee-profiles img {
+.employee-profiles figure img {
     width: 100%;
     border-radius: 6px;
 }
@@ -116,6 +371,7 @@ form fieldset {
 
 form legend {
     font-weight: bold;
+    color: var(--primary-color);
 }
 
 label {
@@ -131,25 +387,246 @@ textarea {
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    outline: 2px solid var(--secondary-color);
+    border-color: transparent;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
+    width: auto;
     margin-right: 6px;
 }
 
-button {
-    background-color: #0b3d91;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+label.newsletter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 10px;
+    font-size: 0.95rem;
+    background: none;
+    padding: 0;
 }
 
-button:hover {
-    background-color: #062a66;
+/* =========================
+   TRIPS PAGE: CTA STRIP
+========================= */
+
+.trips-cta {
+    background-color: #d6e4ff;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.trips-cta p {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* =========================
+   TRIPS PAGE: TRIP CARDS GRID
+========================= */
+
+.trip-details {
+    margin-bottom: 30px;
+}
+
+.trip-details h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.trips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.trip-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip-card-body {
+    padding: 16px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-badge {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    align-self: flex-start;
+    letter-spacing: 0.04em;
+}
+
+.trip-card-body h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin: 0 0 8px;
+}
+
+.trip-card-body p {
+    font-size: 0.95rem;
+    color: #555;
+    flex: 1;
+    margin-bottom: 12px;
+}
+
+.trip-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #e0e8f5;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 10px;
+    font-size: 0.88rem;
+    color: #333;
+}
+
+/* =========================
+   TRIPS PAGE: TABLE
+========================= */
+
+.trips-table-section {
+    margin-bottom: 30px;
+}
+
+.trips-table-section h2 {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.trips-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trips-table caption {
+    caption-side: bottom;
+    font-size: 0.82rem;
+    color: #666;
+    padding: 6px;
+    text-align: left;
+}
+
+.trips-table thead {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.trips-table thead th {
+    padding: 12px 14px;
+    text-align: left;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.trips-table tbody tr {
+    border-bottom: 1px solid #e0e8f5;
+}
+
+.trips-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f0f5ff;
+}
+
+.trips-table tbody td {
+    padding: 12px 14px;
+    color: #333;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.history,
+.mission,
+.adventures {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.history h2,
+.mission h2,
+.adventures h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.adventure-gallery figure img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.88rem;
+    color: #666;
+    margin-top: 6px;
 }
 
 /* =========================
@@ -159,27 +636,67 @@ button:hover {
 footer {
     background-color: #0b3d91;
     color: white;
-    text-align: center;
-    padding: 15px;
+    padding: 15px 20px;
     margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-footer .socialmedia a {
-    margin: 0 8px;
+footer p {
+    margin: 0;
+    color: white;
 }
 
-footer img {
+.socialmedia {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.socialmedia a {
+    margin: 0;
+}
+
+.socialmedia img {
     height: 25px;
+    width: 25px;
+    object-fit: contain;
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         text-align: center;
+        gap: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .hero img {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .why-grid,
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trips-cta {
+        flex-direction: column;
     }
 
     .employee-profiles {
@@ -187,8 +704,19 @@ footer img {
         align-items: center;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 8px;
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.4rem;
+    }
+
+    .trip-meta {
+        grid-template-columns: 1fr;
     }
 }
